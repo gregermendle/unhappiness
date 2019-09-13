@@ -1,0 +1,4 @@
+*.tokens
+*.interp
+*.g4
+node_modules
