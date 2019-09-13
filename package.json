@@ -2,8 +2,7 @@
   "name": "xpath-to-ast",
   "version": "0.0.1",
   "description": "Convert XPath to an AST",
-  "types": "index.d.ts",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "antlr4ts -visitor xpath.g4"
