@@ -1,229 +1,229 @@
-// Generated from xpath.g4 by ANTLR 4.7.3-SNAPSHOT
+// Generated from ./XPath.g4 by ANTLR 4.7.3-SNAPSHOT
 
 
 import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor";
 
-import { MainContext } from "./xpathParser";
-import { LocationPathContext } from "./xpathParser";
-import { AbsoluteLocationPathNorootContext } from "./xpathParser";
-import { RelativeLocationPathContext } from "./xpathParser";
-import { StepContext } from "./xpathParser";
-import { AxisSpecifierContext } from "./xpathParser";
-import { NodeTestContext } from "./xpathParser";
-import { PredicateContext } from "./xpathParser";
-import { AbbreviatedStepContext } from "./xpathParser";
-import { ExprContext } from "./xpathParser";
-import { PrimaryExprContext } from "./xpathParser";
-import { FunctionCallContext } from "./xpathParser";
-import { UnionExprNoRootContext } from "./xpathParser";
-import { PathExprNoRootContext } from "./xpathParser";
-import { FilterExprContext } from "./xpathParser";
-import { OrExprContext } from "./xpathParser";
-import { AndExprContext } from "./xpathParser";
-import { EqualityExprContext } from "./xpathParser";
-import { RelationalExprContext } from "./xpathParser";
-import { AdditiveExprContext } from "./xpathParser";
-import { MultiplicativeExprContext } from "./xpathParser";
-import { UnaryExprNoRootContext } from "./xpathParser";
-import { QNameContext } from "./xpathParser";
-import { FunctionNameContext } from "./xpathParser";
-import { VariableReferenceContext } from "./xpathParser";
-import { NameTestContext } from "./xpathParser";
-import { NCNameContext } from "./xpathParser";
+import { MainContext } from "./XPathParser";
+import { LocationPathContext } from "./XPathParser";
+import { AbsoluteLocationPathNorootContext } from "./XPathParser";
+import { RelativeLocationPathContext } from "./XPathParser";
+import { StepContext } from "./XPathParser";
+import { AxisSpecifierContext } from "./XPathParser";
+import { NodeTestContext } from "./XPathParser";
+import { PredicateContext } from "./XPathParser";
+import { AbbreviatedStepContext } from "./XPathParser";
+import { ExprContext } from "./XPathParser";
+import { PrimaryExprContext } from "./XPathParser";
+import { FunctionCallContext } from "./XPathParser";
+import { UnionExprNoRootContext } from "./XPathParser";
+import { PathExprNoRootContext } from "./XPathParser";
+import { FilterExprContext } from "./XPathParser";
+import { OrExprContext } from "./XPathParser";
+import { AndExprContext } from "./XPathParser";
+import { EqualityExprContext } from "./XPathParser";
+import { RelationalExprContext } from "./XPathParser";
+import { AdditiveExprContext } from "./XPathParser";
+import { MultiplicativeExprContext } from "./XPathParser";
+import { UnaryExprNoRootContext } from "./XPathParser";
+import { QNameContext } from "./XPathParser";
+import { FunctionNameContext } from "./XPathParser";
+import { VariableReferenceContext } from "./XPathParser";
+import { NameTestContext } from "./XPathParser";
+import { NCNameContext } from "./XPathParser";
 
 
 /**
  * This interface defines a complete generic visitor for a parse tree produced
- * by `xpathParser`.
+ * by `XPathParser`.
  *
  * @param <Result> The return type of the visit operation. Use `void` for
  * operations with no return type.
  */
-export interface xpathVisitor<Result> extends ParseTreeVisitor<Result> {
+export interface XPathVisitor<Result> extends ParseTreeVisitor<Result> {
 	/**
-	 * Visit a parse tree produced by `xpathParser.main`.
+	 * Visit a parse tree produced by `XPathParser.main`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitMain?: (ctx: MainContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.locationPath`.
+	 * Visit a parse tree produced by `XPathParser.locationPath`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitLocationPath?: (ctx: LocationPathContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.absoluteLocationPathNoroot`.
+	 * Visit a parse tree produced by `XPathParser.absoluteLocationPathNoroot`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitAbsoluteLocationPathNoroot?: (ctx: AbsoluteLocationPathNorootContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.relativeLocationPath`.
+	 * Visit a parse tree produced by `XPathParser.relativeLocationPath`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitRelativeLocationPath?: (ctx: RelativeLocationPathContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.step`.
+	 * Visit a parse tree produced by `XPathParser.step`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitStep?: (ctx: StepContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.axisSpecifier`.
+	 * Visit a parse tree produced by `XPathParser.axisSpecifier`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitAxisSpecifier?: (ctx: AxisSpecifierContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.nodeTest`.
+	 * Visit a parse tree produced by `XPathParser.nodeTest`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitNodeTest?: (ctx: NodeTestContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.predicate`.
+	 * Visit a parse tree produced by `XPathParser.predicate`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitPredicate?: (ctx: PredicateContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.abbreviatedStep`.
+	 * Visit a parse tree produced by `XPathParser.abbreviatedStep`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitAbbreviatedStep?: (ctx: AbbreviatedStepContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.expr`.
+	 * Visit a parse tree produced by `XPathParser.expr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitExpr?: (ctx: ExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.primaryExpr`.
+	 * Visit a parse tree produced by `XPathParser.primaryExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitPrimaryExpr?: (ctx: PrimaryExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.functionCall`.
+	 * Visit a parse tree produced by `XPathParser.functionCall`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitFunctionCall?: (ctx: FunctionCallContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.unionExprNoRoot`.
+	 * Visit a parse tree produced by `XPathParser.unionExprNoRoot`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitUnionExprNoRoot?: (ctx: UnionExprNoRootContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.pathExprNoRoot`.
+	 * Visit a parse tree produced by `XPathParser.pathExprNoRoot`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitPathExprNoRoot?: (ctx: PathExprNoRootContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.filterExpr`.
+	 * Visit a parse tree produced by `XPathParser.filterExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitFilterExpr?: (ctx: FilterExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.orExpr`.
+	 * Visit a parse tree produced by `XPathParser.orExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitOrExpr?: (ctx: OrExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.andExpr`.
+	 * Visit a parse tree produced by `XPathParser.andExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitAndExpr?: (ctx: AndExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.equalityExpr`.
+	 * Visit a parse tree produced by `XPathParser.equalityExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitEqualityExpr?: (ctx: EqualityExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.relationalExpr`.
+	 * Visit a parse tree produced by `XPathParser.relationalExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitRelationalExpr?: (ctx: RelationalExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.additiveExpr`.
+	 * Visit a parse tree produced by `XPathParser.additiveExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitAdditiveExpr?: (ctx: AdditiveExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.multiplicativeExpr`.
+	 * Visit a parse tree produced by `XPathParser.multiplicativeExpr`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitMultiplicativeExpr?: (ctx: MultiplicativeExprContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.unaryExprNoRoot`.
+	 * Visit a parse tree produced by `XPathParser.unaryExprNoRoot`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitUnaryExprNoRoot?: (ctx: UnaryExprNoRootContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.qName`.
+	 * Visit a parse tree produced by `XPathParser.qName`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitQName?: (ctx: QNameContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.functionName`.
+	 * Visit a parse tree produced by `XPathParser.functionName`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitFunctionName?: (ctx: FunctionNameContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.variableReference`.
+	 * Visit a parse tree produced by `XPathParser.variableReference`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitVariableReference?: (ctx: VariableReferenceContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.nameTest`.
+	 * Visit a parse tree produced by `XPathParser.nameTest`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	visitNameTest?: (ctx: NameTestContext) => Result;
 
 	/**
-	 * Visit a parse tree produced by `xpathParser.nCName`.
+	 * Visit a parse tree produced by `XPathParser.nCName`.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */

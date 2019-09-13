@@ -1,20 +1,13 @@
-// Generated from xpath.g4 by ANTLR 4.7.3-SNAPSHOT
+// Generated from ./XPath.g4 by ANTLR 4.7.3-SNAPSHOT
 
 
 import { ATN } from "antlr4ts/atn/ATN";
 import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer";
-import { FailedPredicateException } from "antlr4ts/FailedPredicateException";
-import { NotNull } from "antlr4ts/Decorators";
 import { NoViableAltException } from "antlr4ts/NoViableAltException";
-import { Override } from "antlr4ts/Decorators";
 import { Parser } from "antlr4ts/Parser";
 import { ParserRuleContext } from "antlr4ts/ParserRuleContext";
 import { ParserATNSimulator } from "antlr4ts/atn/ParserATNSimulator";
-import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener";
-import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor";
 import { RecognitionException } from "antlr4ts/RecognitionException";
-import { RuleContext } from "antlr4ts/RuleContext";
-//import { RuleVersion } from "antlr4ts/RuleVersion";
 import { TerminalNode } from "antlr4ts/tree/TerminalNode";
 import { Token } from "antlr4ts/Token";
 import { TokenStream } from "antlr4ts/TokenStream";
@@ -23,11 +16,11 @@ import { VocabularyImpl } from "antlr4ts/VocabularyImpl";
 
 import * as Utils from "antlr4ts/misc/Utils";
 
-import { xpathListener } from "./xpathListener";
-import { xpathVisitor } from "./xpathVisitor";
+import { XPathListener } from "./XPathListener";
+import { XPathVisitor } from "./XPathVisitor";
 
 
-export class xpathParser extends Parser {
+export class XPathParser extends Parser {
 	public static readonly T__0 = 1;
 	public static readonly T__1 = 2;
 	public static readonly T__2 = 3;
@@ -114,32 +107,32 @@ export class xpathParser extends Parser {
 		"AT", "COMMA", "PIPE", "LESS", "MORE_", "LE", "GE", "COLON", "CC", "APOS", 
 		"QUOT", "Literal", "Whitespace", "NCName",
 	];
-	public static readonly VOCABULARY: Vocabulary = new VocabularyImpl(xpathParser._LITERAL_NAMES, xpathParser._SYMBOLIC_NAMES, []);
+	public static readonly VOCABULARY: Vocabulary = new VocabularyImpl(XPathParser._LITERAL_NAMES, XPathParser._SYMBOLIC_NAMES, []);
 
 	// @Override
 	// @NotNull
 	public get vocabulary(): Vocabulary {
-		return xpathParser.VOCABULARY;
+		return XPathParser.VOCABULARY;
 	}
 	// tslint:enable:no-trailing-whitespace
 
 	// @Override
-	public get grammarFileName(): string { return "xpath.g4"; }
+	public get grammarFileName(): string { return "XPath.g4"; }
 
 	// @Override
-	public get ruleNames(): string[] { return xpathParser.ruleNames; }
+	public get ruleNames(): string[] { return XPathParser.ruleNames; }
 
 	// @Override
-	public get serializedATN(): string { return xpathParser._serializedATN; }
+	public get serializedATN(): string { return XPathParser._serializedATN; }
 
 	constructor(input: TokenStream) {
 		super(input);
-		this._interp = new ParserATNSimulator(xpathParser._ATN, this);
+		this._interp = new ParserATNSimulator(XPathParser._ATN, this);
 	}
 	// @RuleVersion(0)
 	public main(): MainContext {
 		let _localctx: MainContext = new MainContext(this._ctx, this.state);
-		this.enterRule(_localctx, 0, xpathParser.RULE_main);
+		this.enterRule(_localctx, 0, XPathParser.RULE_main);
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
@@ -164,27 +157,27 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public locationPath(): LocationPathContext {
 		let _localctx: LocationPathContext = new LocationPathContext(this._ctx, this.state);
-		this.enterRule(_localctx, 2, xpathParser.RULE_locationPath);
+		this.enterRule(_localctx, 2, XPathParser.RULE_locationPath);
 		try {
 			this.state = 58;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case xpathParser.T__0:
-			case xpathParser.NodeType:
-			case xpathParser.AxisName:
-			case xpathParser.DOT:
-			case xpathParser.MUL:
-			case xpathParser.DOTDOT:
-			case xpathParser.AT:
-			case xpathParser.NCName:
+			case XPathParser.T__0:
+			case XPathParser.NodeType:
+			case XPathParser.AxisName:
+			case XPathParser.DOT:
+			case XPathParser.MUL:
+			case XPathParser.DOTDOT:
+			case XPathParser.AT:
+			case XPathParser.NCName:
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 56;
 				this.relativeLocationPath();
 				}
 				break;
-			case xpathParser.PATHSEP:
-			case xpathParser.ABRPATH:
+			case XPathParser.PATHSEP:
+			case XPathParser.ABRPATH:
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 57;
@@ -212,25 +205,25 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public absoluteLocationPathNoroot(): AbsoluteLocationPathNorootContext {
 		let _localctx: AbsoluteLocationPathNorootContext = new AbsoluteLocationPathNorootContext(this._ctx, this.state);
-		this.enterRule(_localctx, 4, xpathParser.RULE_absoluteLocationPathNoroot);
+		this.enterRule(_localctx, 4, XPathParser.RULE_absoluteLocationPathNoroot);
 		try {
 			this.state = 64;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case xpathParser.PATHSEP:
+			case XPathParser.PATHSEP:
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 60;
-				this.match(xpathParser.PATHSEP);
+				this.match(XPathParser.PATHSEP);
 				this.state = 61;
 				this.relativeLocationPath();
 				}
 				break;
-			case xpathParser.ABRPATH:
+			case XPathParser.ABRPATH:
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 62;
-				this.match(xpathParser.ABRPATH);
+				this.match(XPathParser.ABRPATH);
 				this.state = 63;
 				this.relativeLocationPath();
 				}
@@ -256,7 +249,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public relativeLocationPath(): RelativeLocationPathContext {
 		let _localctx: RelativeLocationPathContext = new RelativeLocationPathContext(this._ctx, this.state);
-		this.enterRule(_localctx, 6, xpathParser.RULE_relativeLocationPath);
+		this.enterRule(_localctx, 6, XPathParser.RULE_relativeLocationPath);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -266,12 +259,12 @@ export class xpathParser extends Parser {
 			this.state = 71;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.PATHSEP || _la === xpathParser.ABRPATH) {
+			while (_la === XPathParser.PATHSEP || _la === XPathParser.ABRPATH) {
 				{
 				{
 				this.state = 67;
 				_la = this._input.LA(1);
-				if (!(_la === xpathParser.PATHSEP || _la === xpathParser.ABRPATH)) {
+				if (!(_la === XPathParser.PATHSEP || _la === XPathParser.ABRPATH)) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -308,18 +301,18 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public step(): StepContext {
 		let _localctx: StepContext = new StepContext(this._ctx, this.state);
-		this.enterRule(_localctx, 8, xpathParser.RULE_step);
+		this.enterRule(_localctx, 8, XPathParser.RULE_step);
 		let _la: number;
 		try {
 			this.state = 83;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case xpathParser.T__0:
-			case xpathParser.NodeType:
-			case xpathParser.AxisName:
-			case xpathParser.MUL:
-			case xpathParser.AT:
-			case xpathParser.NCName:
+			case XPathParser.T__0:
+			case XPathParser.NodeType:
+			case XPathParser.AxisName:
+			case XPathParser.MUL:
+			case XPathParser.AT:
+			case XPathParser.NCName:
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 74;
@@ -329,7 +322,7 @@ export class xpathParser extends Parser {
 				this.state = 79;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				while (_la === xpathParser.LBRAC) {
+				while (_la === XPathParser.LBRAC) {
 					{
 					{
 					this.state = 76;
@@ -342,8 +335,8 @@ export class xpathParser extends Parser {
 				}
 				}
 				break;
-			case xpathParser.DOT:
-			case xpathParser.DOTDOT:
+			case XPathParser.DOT:
+			case XPathParser.DOTDOT:
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 82;
@@ -371,7 +364,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public axisSpecifier(): AxisSpecifierContext {
 		let _localctx: AxisSpecifierContext = new AxisSpecifierContext(this._ctx, this.state);
-		this.enterRule(_localctx, 10, xpathParser.RULE_axisSpecifier);
+		this.enterRule(_localctx, 10, XPathParser.RULE_axisSpecifier);
 		let _la: number;
 		try {
 			this.state = 90;
@@ -381,9 +374,9 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 85;
-				this.match(xpathParser.AxisName);
+				this.match(XPathParser.AxisName);
 				this.state = 86;
-				this.match(xpathParser.CC);
+				this.match(XPathParser.CC);
 				}
 				break;
 
@@ -393,10 +386,10 @@ export class xpathParser extends Parser {
 				this.state = 88;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la === xpathParser.AT) {
+				if (_la === XPathParser.AT) {
 					{
 					this.state = 87;
-					this.match(xpathParser.AT);
+					this.match(XPathParser.AT);
 					}
 				}
 
@@ -421,7 +414,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public nodeTest(): NodeTestContext {
 		let _localctx: NodeTestContext = new NodeTestContext(this._ctx, this.state);
-		this.enterRule(_localctx, 12, xpathParser.RULE_nodeTest);
+		this.enterRule(_localctx, 12, XPathParser.RULE_nodeTest);
 		try {
 			this.state = 100;
 			this._errHandler.sync(this);
@@ -438,11 +431,11 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 93;
-				this.match(xpathParser.NodeType);
+				this.match(XPathParser.NodeType);
 				this.state = 94;
-				this.match(xpathParser.LPAR);
+				this.match(XPathParser.LPAR);
 				this.state = 95;
-				this.match(xpathParser.RPAR);
+				this.match(XPathParser.RPAR);
 				}
 				break;
 
@@ -450,13 +443,13 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 3);
 				{
 				this.state = 96;
-				this.match(xpathParser.T__0);
+				this.match(XPathParser.T__0);
 				this.state = 97;
-				this.match(xpathParser.LPAR);
+				this.match(XPathParser.LPAR);
 				this.state = 98;
-				this.match(xpathParser.Literal);
+				this.match(XPathParser.Literal);
 				this.state = 99;
-				this.match(xpathParser.RPAR);
+				this.match(XPathParser.RPAR);
 				}
 				break;
 			}
@@ -478,16 +471,16 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public predicate(): PredicateContext {
 		let _localctx: PredicateContext = new PredicateContext(this._ctx, this.state);
-		this.enterRule(_localctx, 14, xpathParser.RULE_predicate);
+		this.enterRule(_localctx, 14, XPathParser.RULE_predicate);
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
 			this.state = 102;
-			this.match(xpathParser.LBRAC);
+			this.match(XPathParser.LBRAC);
 			this.state = 103;
 			this.expr();
 			this.state = 104;
-			this.match(xpathParser.RBRAC);
+			this.match(XPathParser.RBRAC);
 			}
 		}
 		catch (re) {
@@ -507,14 +500,14 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public abbreviatedStep(): AbbreviatedStepContext {
 		let _localctx: AbbreviatedStepContext = new AbbreviatedStepContext(this._ctx, this.state);
-		this.enterRule(_localctx, 16, xpathParser.RULE_abbreviatedStep);
+		this.enterRule(_localctx, 16, XPathParser.RULE_abbreviatedStep);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
 			this.state = 106;
 			_la = this._input.LA(1);
-			if (!(_la === xpathParser.DOT || _la === xpathParser.DOTDOT)) {
+			if (!(_la === XPathParser.DOT || _la === XPathParser.DOTDOT)) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -543,7 +536,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public expr(): ExprContext {
 		let _localctx: ExprContext = new ExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 18, xpathParser.RULE_expr);
+		this.enterRule(_localctx, 18, XPathParser.RULE_expr);
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
@@ -568,46 +561,46 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public primaryExpr(): PrimaryExprContext {
 		let _localctx: PrimaryExprContext = new PrimaryExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 20, xpathParser.RULE_primaryExpr);
+		this.enterRule(_localctx, 20, XPathParser.RULE_primaryExpr);
 		try {
 			this.state = 118;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
-			case xpathParser.T__7:
+			case XPathParser.T__7:
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 110;
 				this.variableReference();
 				}
 				break;
-			case xpathParser.LPAR:
+			case XPathParser.LPAR:
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 111;
-				this.match(xpathParser.LPAR);
+				this.match(XPathParser.LPAR);
 				this.state = 112;
 				this.expr();
 				this.state = 113;
-				this.match(xpathParser.RPAR);
+				this.match(XPathParser.RPAR);
 				}
 				break;
-			case xpathParser.Literal:
+			case XPathParser.Literal:
 				this.enterOuterAlt(_localctx, 3);
 				{
 				this.state = 115;
-				this.match(xpathParser.Literal);
+				this.match(XPathParser.Literal);
 				}
 				break;
-			case xpathParser.Number:
+			case XPathParser.Number:
 				this.enterOuterAlt(_localctx, 4);
 				{
 				this.state = 116;
-				this.match(xpathParser.Number);
+				this.match(XPathParser.Number);
 				}
 				break;
-			case xpathParser.NodeType:
-			case xpathParser.AxisName:
-			case xpathParser.NCName:
+			case XPathParser.NodeType:
+			case XPathParser.AxisName:
+			case XPathParser.NCName:
 				this.enterOuterAlt(_localctx, 5);
 				{
 				this.state = 117;
@@ -635,7 +628,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public functionCall(): FunctionCallContext {
 		let _localctx: FunctionCallContext = new FunctionCallContext(this._ctx, this.state);
-		this.enterRule(_localctx, 22, xpathParser.RULE_functionCall);
+		this.enterRule(_localctx, 22, XPathParser.RULE_functionCall);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -643,22 +636,22 @@ export class xpathParser extends Parser {
 			this.state = 120;
 			this.functionName();
 			this.state = 121;
-			this.match(xpathParser.LPAR);
+			this.match(XPathParser.LPAR);
 			this.state = 130;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << xpathParser.T__0) | (1 << xpathParser.T__7) | (1 << xpathParser.NodeType) | (1 << xpathParser.Number) | (1 << xpathParser.AxisName) | (1 << xpathParser.PATHSEP) | (1 << xpathParser.ABRPATH) | (1 << xpathParser.LPAR) | (1 << xpathParser.MINUS) | (1 << xpathParser.DOT) | (1 << xpathParser.MUL) | (1 << xpathParser.DOTDOT) | (1 << xpathParser.AT))) !== 0) || _la === xpathParser.Literal || _la === xpathParser.NCName) {
+			if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << XPathParser.T__0) | (1 << XPathParser.T__7) | (1 << XPathParser.NodeType) | (1 << XPathParser.Number) | (1 << XPathParser.AxisName) | (1 << XPathParser.PATHSEP) | (1 << XPathParser.ABRPATH) | (1 << XPathParser.LPAR) | (1 << XPathParser.MINUS) | (1 << XPathParser.DOT) | (1 << XPathParser.MUL) | (1 << XPathParser.DOTDOT) | (1 << XPathParser.AT))) !== 0) || _la === XPathParser.Literal || _la === XPathParser.NCName) {
 				{
 				this.state = 122;
 				this.expr();
 				this.state = 127;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				while (_la === xpathParser.COMMA) {
+				while (_la === XPathParser.COMMA) {
 					{
 					{
 					this.state = 123;
-					this.match(xpathParser.COMMA);
+					this.match(XPathParser.COMMA);
 					this.state = 124;
 					this.expr();
 					}
@@ -671,7 +664,7 @@ export class xpathParser extends Parser {
 			}
 
 			this.state = 132;
-			this.match(xpathParser.RPAR);
+			this.match(XPathParser.RPAR);
 			}
 		}
 		catch (re) {
@@ -691,7 +684,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public unionExprNoRoot(): UnionExprNoRootContext {
 		let _localctx: UnionExprNoRootContext = new UnionExprNoRootContext(this._ctx, this.state);
-		this.enterRule(_localctx, 24, xpathParser.RULE_unionExprNoRoot);
+		this.enterRule(_localctx, 24, XPathParser.RULE_unionExprNoRoot);
 		let _la: number;
 		try {
 			this.state = 142;
@@ -705,10 +698,10 @@ export class xpathParser extends Parser {
 				this.state = 137;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la === xpathParser.PIPE) {
+				if (_la === XPathParser.PIPE) {
 					{
 					this.state = 135;
-					this.match(xpathParser.PIPE);
+					this.match(XPathParser.PIPE);
 					this.state = 136;
 					this.unionExprNoRoot();
 					}
@@ -721,9 +714,9 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 139;
-				this.match(xpathParser.PATHSEP);
+				this.match(XPathParser.PATHSEP);
 				this.state = 140;
-				this.match(xpathParser.PIPE);
+				this.match(XPathParser.PIPE);
 				this.state = 141;
 				this.unionExprNoRoot();
 				}
@@ -747,7 +740,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public pathExprNoRoot(): PathExprNoRootContext {
 		let _localctx: PathExprNoRootContext = new PathExprNoRootContext(this._ctx, this.state);
-		this.enterRule(_localctx, 26, xpathParser.RULE_pathExprNoRoot);
+		this.enterRule(_localctx, 26, XPathParser.RULE_pathExprNoRoot);
 		let _la: number;
 		try {
 			this.state = 150;
@@ -769,11 +762,11 @@ export class xpathParser extends Parser {
 				this.state = 148;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la === xpathParser.PATHSEP || _la === xpathParser.ABRPATH) {
+				if (_la === XPathParser.PATHSEP || _la === XPathParser.ABRPATH) {
 					{
 					this.state = 146;
 					_la = this._input.LA(1);
-					if (!(_la === xpathParser.PATHSEP || _la === xpathParser.ABRPATH)) {
+					if (!(_la === XPathParser.PATHSEP || _la === XPathParser.ABRPATH)) {
 					this._errHandler.recoverInline(this);
 					} else {
 						if (this._input.LA(1) === Token.EOF) {
@@ -809,7 +802,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public filterExpr(): FilterExprContext {
 		let _localctx: FilterExprContext = new FilterExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 28, xpathParser.RULE_filterExpr);
+		this.enterRule(_localctx, 28, XPathParser.RULE_filterExpr);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -819,7 +812,7 @@ export class xpathParser extends Parser {
 			this.state = 156;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.LBRAC) {
+			while (_la === XPathParser.LBRAC) {
 				{
 				{
 				this.state = 153;
@@ -849,7 +842,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public orExpr(): OrExprContext {
 		let _localctx: OrExprContext = new OrExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 30, xpathParser.RULE_orExpr);
+		this.enterRule(_localctx, 30, XPathParser.RULE_orExpr);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -859,11 +852,11 @@ export class xpathParser extends Parser {
 			this.state = 164;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.T__1) {
+			while (_la === XPathParser.T__1) {
 				{
 				{
 				this.state = 160;
-				this.match(xpathParser.T__1);
+				this.match(XPathParser.T__1);
 				this.state = 161;
 				this.andExpr();
 				}
@@ -891,7 +884,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public andExpr(): AndExprContext {
 		let _localctx: AndExprContext = new AndExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 32, xpathParser.RULE_andExpr);
+		this.enterRule(_localctx, 32, XPathParser.RULE_andExpr);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -901,11 +894,11 @@ export class xpathParser extends Parser {
 			this.state = 172;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.T__2) {
+			while (_la === XPathParser.T__2) {
 				{
 				{
 				this.state = 168;
-				this.match(xpathParser.T__2);
+				this.match(XPathParser.T__2);
 				this.state = 169;
 				this.equalityExpr();
 				}
@@ -933,7 +926,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public equalityExpr(): EqualityExprContext {
 		let _localctx: EqualityExprContext = new EqualityExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 34, xpathParser.RULE_equalityExpr);
+		this.enterRule(_localctx, 34, XPathParser.RULE_equalityExpr);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -943,12 +936,12 @@ export class xpathParser extends Parser {
 			this.state = 180;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.T__3 || _la === xpathParser.T__4) {
+			while (_la === XPathParser.T__3 || _la === XPathParser.T__4) {
 				{
 				{
 				this.state = 176;
 				_la = this._input.LA(1);
-				if (!(_la === xpathParser.T__3 || _la === xpathParser.T__4)) {
+				if (!(_la === XPathParser.T__3 || _la === XPathParser.T__4)) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -985,7 +978,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public relationalExpr(): RelationalExprContext {
 		let _localctx: RelationalExprContext = new RelationalExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 36, xpathParser.RULE_relationalExpr);
+		this.enterRule(_localctx, 36, XPathParser.RULE_relationalExpr);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -995,12 +988,12 @@ export class xpathParser extends Parser {
 			this.state = 188;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << xpathParser.LESS) | (1 << xpathParser.MORE_) | (1 << xpathParser.LE) | (1 << xpathParser.GE))) !== 0)) {
+			while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << XPathParser.LESS) | (1 << XPathParser.MORE_) | (1 << XPathParser.LE) | (1 << XPathParser.GE))) !== 0)) {
 				{
 				{
 				this.state = 184;
 				_la = this._input.LA(1);
-				if (!((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << xpathParser.LESS) | (1 << xpathParser.MORE_) | (1 << xpathParser.LE) | (1 << xpathParser.GE))) !== 0))) {
+				if (!((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << XPathParser.LESS) | (1 << XPathParser.MORE_) | (1 << XPathParser.LE) | (1 << XPathParser.GE))) !== 0))) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -1037,7 +1030,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public additiveExpr(): AdditiveExprContext {
 		let _localctx: AdditiveExprContext = new AdditiveExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 38, xpathParser.RULE_additiveExpr);
+		this.enterRule(_localctx, 38, XPathParser.RULE_additiveExpr);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -1047,12 +1040,12 @@ export class xpathParser extends Parser {
 			this.state = 196;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.MINUS || _la === xpathParser.PLUS) {
+			while (_la === XPathParser.MINUS || _la === XPathParser.PLUS) {
 				{
 				{
 				this.state = 192;
 				_la = this._input.LA(1);
-				if (!(_la === xpathParser.MINUS || _la === xpathParser.PLUS)) {
+				if (!(_la === XPathParser.MINUS || _la === XPathParser.PLUS)) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -1089,7 +1082,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public multiplicativeExpr(): MultiplicativeExprContext {
 		let _localctx: MultiplicativeExprContext = new MultiplicativeExprContext(this._ctx, this.state);
-		this.enterRule(_localctx, 40, xpathParser.RULE_multiplicativeExpr);
+		this.enterRule(_localctx, 40, XPathParser.RULE_multiplicativeExpr);
 		let _la: number;
 		try {
 			this.state = 209;
@@ -1103,11 +1096,11 @@ export class xpathParser extends Parser {
 				this.state = 202;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << xpathParser.T__5) | (1 << xpathParser.T__6) | (1 << xpathParser.MUL))) !== 0)) {
+				if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << XPathParser.T__5) | (1 << XPathParser.T__6) | (1 << XPathParser.MUL))) !== 0)) {
 					{
 					this.state = 200;
 					_la = this._input.LA(1);
-					if (!((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << xpathParser.T__5) | (1 << xpathParser.T__6) | (1 << xpathParser.MUL))) !== 0))) {
+					if (!((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << XPathParser.T__5) | (1 << XPathParser.T__6) | (1 << XPathParser.MUL))) !== 0))) {
 					this._errHandler.recoverInline(this);
 					} else {
 						if (this._input.LA(1) === Token.EOF) {
@@ -1129,15 +1122,15 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 204;
-				this.match(xpathParser.PATHSEP);
+				this.match(XPathParser.PATHSEP);
 				this.state = 207;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if (_la === xpathParser.T__5 || _la === xpathParser.T__6) {
+				if (_la === XPathParser.T__5 || _la === XPathParser.T__6) {
 					{
 					this.state = 205;
 					_la = this._input.LA(1);
-					if (!(_la === xpathParser.T__5 || _la === xpathParser.T__6)) {
+					if (!(_la === XPathParser.T__5 || _la === XPathParser.T__6)) {
 					this._errHandler.recoverInline(this);
 					} else {
 						if (this._input.LA(1) === Token.EOF) {
@@ -1173,7 +1166,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public unaryExprNoRoot(): UnaryExprNoRootContext {
 		let _localctx: UnaryExprNoRootContext = new UnaryExprNoRootContext(this._ctx, this.state);
-		this.enterRule(_localctx, 42, xpathParser.RULE_unaryExprNoRoot);
+		this.enterRule(_localctx, 42, XPathParser.RULE_unaryExprNoRoot);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -1181,11 +1174,11 @@ export class xpathParser extends Parser {
 			this.state = 214;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (_la === xpathParser.MINUS) {
+			while (_la === XPathParser.MINUS) {
 				{
 				{
 				this.state = 211;
-				this.match(xpathParser.MINUS);
+				this.match(XPathParser.MINUS);
 				}
 				}
 				this.state = 216;
@@ -1213,7 +1206,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public qName(): QNameContext {
 		let _localctx: QNameContext = new QNameContext(this._ctx, this.state);
-		this.enterRule(_localctx, 44, xpathParser.RULE_qName);
+		this.enterRule(_localctx, 44, XPathParser.RULE_qName);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
@@ -1223,10 +1216,10 @@ export class xpathParser extends Parser {
 			this.state = 222;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			if (_la === xpathParser.COLON) {
+			if (_la === XPathParser.COLON) {
 				{
 				this.state = 220;
-				this.match(xpathParser.COLON);
+				this.match(XPathParser.COLON);
 				this.state = 221;
 				this.nCName();
 				}
@@ -1251,7 +1244,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public functionName(): FunctionNameContext {
 		let _localctx: FunctionNameContext = new FunctionNameContext(this._ctx, this.state);
-		this.enterRule(_localctx, 46, xpathParser.RULE_functionName);
+		this.enterRule(_localctx, 46, XPathParser.RULE_functionName);
 		try {
 			this.state = 230;
 			this._errHandler.sync(this);
@@ -1262,7 +1255,7 @@ export class xpathParser extends Parser {
 				this.state = 224;
 				this.nCName();
 				this.state = 225;
-				this.match(xpathParser.COLON);
+				this.match(XPathParser.COLON);
 				this.state = 226;
 				this.nCName();
 				}
@@ -1272,7 +1265,7 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 2);
 				{
 				this.state = 228;
-				this.match(xpathParser.NCName);
+				this.match(XPathParser.NCName);
 				}
 				break;
 
@@ -1280,7 +1273,7 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 3);
 				{
 				this.state = 229;
-				this.match(xpathParser.AxisName);
+				this.match(XPathParser.AxisName);
 				}
 				break;
 			}
@@ -1302,12 +1295,12 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public variableReference(): VariableReferenceContext {
 		let _localctx: VariableReferenceContext = new VariableReferenceContext(this._ctx, this.state);
-		this.enterRule(_localctx, 48, xpathParser.RULE_variableReference);
+		this.enterRule(_localctx, 48, XPathParser.RULE_variableReference);
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
 			this.state = 232;
-			this.match(xpathParser.T__7);
+			this.match(XPathParser.T__7);
 			this.state = 233;
 			this.qName();
 			}
@@ -1329,7 +1322,7 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public nameTest(): NameTestContext {
 		let _localctx: NameTestContext = new NameTestContext(this._ctx, this.state);
-		this.enterRule(_localctx, 50, xpathParser.RULE_nameTest);
+		this.enterRule(_localctx, 50, XPathParser.RULE_nameTest);
 		try {
 			this.state = 241;
 			this._errHandler.sync(this);
@@ -1338,7 +1331,7 @@ export class xpathParser extends Parser {
 				this.enterOuterAlt(_localctx, 1);
 				{
 				this.state = 235;
-				this.match(xpathParser.MUL);
+				this.match(XPathParser.MUL);
 				}
 				break;
 
@@ -1348,9 +1341,9 @@ export class xpathParser extends Parser {
 				this.state = 236;
 				this.nCName();
 				this.state = 237;
-				this.match(xpathParser.COLON);
+				this.match(XPathParser.COLON);
 				this.state = 238;
-				this.match(xpathParser.MUL);
+				this.match(XPathParser.MUL);
 				}
 				break;
 
@@ -1380,14 +1373,14 @@ export class xpathParser extends Parser {
 	// @RuleVersion(0)
 	public nCName(): NCNameContext {
 		let _localctx: NCNameContext = new NCNameContext(this._ctx, this.state);
-		this.enterRule(_localctx, 52, xpathParser.RULE_nCName);
+		this.enterRule(_localctx, 52, XPathParser.RULE_nCName);
 		let _la: number;
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
 			this.state = 243;
 			_la = this._input.LA(1);
-			if (!(((((_la - 9)) & ~0x1F) === 0 && ((1 << (_la - 9)) & ((1 << (xpathParser.NodeType - 9)) | (1 << (xpathParser.AxisName - 9)) | (1 << (xpathParser.NCName - 9)))) !== 0))) {
+			if (!(((((_la - 9)) & ~0x1F) === 0 && ((1 << (_la - 9)) & ((1 << (XPathParser.NodeType - 9)) | (1 << (XPathParser.AxisName - 9)) | (1 << (XPathParser.NCName - 9)))) !== 0))) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -1526,11 +1519,11 @@ export class xpathParser extends Parser {
 		"\xD8\xE0\xE8\xF3";
 	public static __ATN: ATN;
 	public static get _ATN(): ATN {
-		if (!xpathParser.__ATN) {
-			xpathParser.__ATN = new ATNDeserializer().deserialize(Utils.toCharArray(xpathParser._serializedATN));
+		if (!XPathParser.__ATN) {
+			XPathParser.__ATN = new ATNDeserializer().deserialize(Utils.toCharArray(XPathParser._serializedATN));
 		}
 
-		return xpathParser.__ATN;
+		return XPathParser.__ATN;
 	}
 
 }
@@ -1543,21 +1536,21 @@ export class MainContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_main; }
+	public get ruleIndex(): number { return XPathParser.RULE_main; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterMain) {
 			listener.enterMain(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitMain) {
 			listener.exitMain(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitMain) {
 			return visitor.visitMain(this);
 		} else {
@@ -1578,21 +1571,21 @@ export class LocationPathContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_locationPath; }
+	public get ruleIndex(): number { return XPathParser.RULE_locationPath; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterLocationPath) {
 			listener.enterLocationPath(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitLocationPath) {
 			listener.exitLocationPath(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitLocationPath) {
 			return visitor.visitLocationPath(this);
 		} else {
@@ -1603,30 +1596,30 @@ export class LocationPathContext extends ParserRuleContext {
 
 
 export class AbsoluteLocationPathNorootContext extends ParserRuleContext {
-	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(xpathParser.PATHSEP, 0); }
+	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(XPathParser.PATHSEP, 0); }
 	public relativeLocationPath(): RelativeLocationPathContext {
 		return this.getRuleContext(0, RelativeLocationPathContext);
 	}
-	public ABRPATH(): TerminalNode | undefined { return this.tryGetToken(xpathParser.ABRPATH, 0); }
+	public ABRPATH(): TerminalNode | undefined { return this.tryGetToken(XPathParser.ABRPATH, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_absoluteLocationPathNoroot; }
+	public get ruleIndex(): number { return XPathParser.RULE_absoluteLocationPathNoroot; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterAbsoluteLocationPathNoroot) {
 			listener.enterAbsoluteLocationPathNoroot(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitAbsoluteLocationPathNoroot) {
 			listener.exitAbsoluteLocationPathNoroot(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitAbsoluteLocationPathNoroot) {
 			return visitor.visitAbsoluteLocationPathNoroot(this);
 		} else {
@@ -1650,39 +1643,39 @@ export class RelativeLocationPathContext extends ParserRuleContext {
 	public PATHSEP(i: number): TerminalNode;
 	public PATHSEP(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.PATHSEP);
+			return this.getTokens(XPathParser.PATHSEP);
 		} else {
-			return this.getToken(xpathParser.PATHSEP, i);
+			return this.getToken(XPathParser.PATHSEP, i);
 		}
 	}
 	public ABRPATH(): TerminalNode[];
 	public ABRPATH(i: number): TerminalNode;
 	public ABRPATH(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.ABRPATH);
+			return this.getTokens(XPathParser.ABRPATH);
 		} else {
-			return this.getToken(xpathParser.ABRPATH, i);
+			return this.getToken(XPathParser.ABRPATH, i);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_relativeLocationPath; }
+	public get ruleIndex(): number { return XPathParser.RULE_relativeLocationPath; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterRelativeLocationPath) {
 			listener.enterRelativeLocationPath(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitRelativeLocationPath) {
 			listener.exitRelativeLocationPath(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitRelativeLocationPath) {
 			return visitor.visitRelativeLocationPath(this);
 		} else {
@@ -1715,21 +1708,21 @@ export class StepContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_step; }
+	public get ruleIndex(): number { return XPathParser.RULE_step; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterStep) {
 			listener.enterStep(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitStep) {
 			listener.exitStep(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitStep) {
 			return visitor.visitStep(this);
 		} else {
@@ -1740,28 +1733,28 @@ export class StepContext extends ParserRuleContext {
 
 
 export class AxisSpecifierContext extends ParserRuleContext {
-	public AxisName(): TerminalNode | undefined { return this.tryGetToken(xpathParser.AxisName, 0); }
-	public CC(): TerminalNode | undefined { return this.tryGetToken(xpathParser.CC, 0); }
-	public AT(): TerminalNode | undefined { return this.tryGetToken(xpathParser.AT, 0); }
+	public AxisName(): TerminalNode | undefined { return this.tryGetToken(XPathParser.AxisName, 0); }
+	public CC(): TerminalNode | undefined { return this.tryGetToken(XPathParser.CC, 0); }
+	public AT(): TerminalNode | undefined { return this.tryGetToken(XPathParser.AT, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_axisSpecifier; }
+	public get ruleIndex(): number { return XPathParser.RULE_axisSpecifier; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterAxisSpecifier) {
 			listener.enterAxisSpecifier(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitAxisSpecifier) {
 			listener.exitAxisSpecifier(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitAxisSpecifier) {
 			return visitor.visitAxisSpecifier(this);
 		} else {
@@ -1775,29 +1768,29 @@ export class NodeTestContext extends ParserRuleContext {
 	public nameTest(): NameTestContext | undefined {
 		return this.tryGetRuleContext(0, NameTestContext);
 	}
-	public NodeType(): TerminalNode | undefined { return this.tryGetToken(xpathParser.NodeType, 0); }
-	public LPAR(): TerminalNode | undefined { return this.tryGetToken(xpathParser.LPAR, 0); }
-	public RPAR(): TerminalNode | undefined { return this.tryGetToken(xpathParser.RPAR, 0); }
-	public Literal(): TerminalNode | undefined { return this.tryGetToken(xpathParser.Literal, 0); }
+	public NodeType(): TerminalNode | undefined { return this.tryGetToken(XPathParser.NodeType, 0); }
+	public LPAR(): TerminalNode | undefined { return this.tryGetToken(XPathParser.LPAR, 0); }
+	public RPAR(): TerminalNode | undefined { return this.tryGetToken(XPathParser.RPAR, 0); }
+	public Literal(): TerminalNode | undefined { return this.tryGetToken(XPathParser.Literal, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_nodeTest; }
+	public get ruleIndex(): number { return XPathParser.RULE_nodeTest; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterNodeTest) {
 			listener.enterNodeTest(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitNodeTest) {
 			listener.exitNodeTest(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitNodeTest) {
 			return visitor.visitNodeTest(this);
 		} else {
@@ -1808,30 +1801,30 @@ export class NodeTestContext extends ParserRuleContext {
 
 
 export class PredicateContext extends ParserRuleContext {
-	public LBRAC(): TerminalNode { return this.getToken(xpathParser.LBRAC, 0); }
+	public LBRAC(): TerminalNode { return this.getToken(XPathParser.LBRAC, 0); }
 	public expr(): ExprContext {
 		return this.getRuleContext(0, ExprContext);
 	}
-	public RBRAC(): TerminalNode { return this.getToken(xpathParser.RBRAC, 0); }
+	public RBRAC(): TerminalNode { return this.getToken(XPathParser.RBRAC, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_predicate; }
+	public get ruleIndex(): number { return XPathParser.RULE_predicate; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterPredicate) {
 			listener.enterPredicate(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitPredicate) {
 			listener.exitPredicate(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitPredicate) {
 			return visitor.visitPredicate(this);
 		} else {
@@ -1842,27 +1835,27 @@ export class PredicateContext extends ParserRuleContext {
 
 
 export class AbbreviatedStepContext extends ParserRuleContext {
-	public DOT(): TerminalNode | undefined { return this.tryGetToken(xpathParser.DOT, 0); }
-	public DOTDOT(): TerminalNode | undefined { return this.tryGetToken(xpathParser.DOTDOT, 0); }
+	public DOT(): TerminalNode | undefined { return this.tryGetToken(XPathParser.DOT, 0); }
+	public DOTDOT(): TerminalNode | undefined { return this.tryGetToken(XPathParser.DOTDOT, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_abbreviatedStep; }
+	public get ruleIndex(): number { return XPathParser.RULE_abbreviatedStep; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterAbbreviatedStep) {
 			listener.enterAbbreviatedStep(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitAbbreviatedStep) {
 			listener.exitAbbreviatedStep(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitAbbreviatedStep) {
 			return visitor.visitAbbreviatedStep(this);
 		} else {
@@ -1880,21 +1873,21 @@ export class ExprContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_expr; }
+	public get ruleIndex(): number { return XPathParser.RULE_expr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterExpr) {
 			listener.enterExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitExpr) {
 			listener.exitExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitExpr) {
 			return visitor.visitExpr(this);
 		} else {
@@ -1908,13 +1901,13 @@ export class PrimaryExprContext extends ParserRuleContext {
 	public variableReference(): VariableReferenceContext | undefined {
 		return this.tryGetRuleContext(0, VariableReferenceContext);
 	}
-	public LPAR(): TerminalNode | undefined { return this.tryGetToken(xpathParser.LPAR, 0); }
+	public LPAR(): TerminalNode | undefined { return this.tryGetToken(XPathParser.LPAR, 0); }
 	public expr(): ExprContext | undefined {
 		return this.tryGetRuleContext(0, ExprContext);
 	}
-	public RPAR(): TerminalNode | undefined { return this.tryGetToken(xpathParser.RPAR, 0); }
-	public Literal(): TerminalNode | undefined { return this.tryGetToken(xpathParser.Literal, 0); }
-	public Number(): TerminalNode | undefined { return this.tryGetToken(xpathParser.Number, 0); }
+	public RPAR(): TerminalNode | undefined { return this.tryGetToken(XPathParser.RPAR, 0); }
+	public Literal(): TerminalNode | undefined { return this.tryGetToken(XPathParser.Literal, 0); }
+	public Number(): TerminalNode | undefined { return this.tryGetToken(XPathParser.Number, 0); }
 	public functionCall(): FunctionCallContext | undefined {
 		return this.tryGetRuleContext(0, FunctionCallContext);
 	}
@@ -1922,21 +1915,21 @@ export class PrimaryExprContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_primaryExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_primaryExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterPrimaryExpr) {
 			listener.enterPrimaryExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitPrimaryExpr) {
 			listener.exitPrimaryExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitPrimaryExpr) {
 			return visitor.visitPrimaryExpr(this);
 		} else {
@@ -1950,8 +1943,8 @@ export class FunctionCallContext extends ParserRuleContext {
 	public functionName(): FunctionNameContext {
 		return this.getRuleContext(0, FunctionNameContext);
 	}
-	public LPAR(): TerminalNode { return this.getToken(xpathParser.LPAR, 0); }
-	public RPAR(): TerminalNode { return this.getToken(xpathParser.RPAR, 0); }
+	public LPAR(): TerminalNode { return this.getToken(XPathParser.LPAR, 0); }
+	public RPAR(): TerminalNode { return this.getToken(XPathParser.RPAR, 0); }
 	public expr(): ExprContext[];
 	public expr(i: number): ExprContext;
 	public expr(i?: number): ExprContext | ExprContext[] {
@@ -1965,30 +1958,30 @@ export class FunctionCallContext extends ParserRuleContext {
 	public COMMA(i: number): TerminalNode;
 	public COMMA(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.COMMA);
+			return this.getTokens(XPathParser.COMMA);
 		} else {
-			return this.getToken(xpathParser.COMMA, i);
+			return this.getToken(XPathParser.COMMA, i);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_functionCall; }
+	public get ruleIndex(): number { return XPathParser.RULE_functionCall; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterFunctionCall) {
 			listener.enterFunctionCall(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitFunctionCall) {
 			listener.exitFunctionCall(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitFunctionCall) {
 			return visitor.visitFunctionCall(this);
 		} else {
@@ -2002,30 +1995,30 @@ export class UnionExprNoRootContext extends ParserRuleContext {
 	public pathExprNoRoot(): PathExprNoRootContext | undefined {
 		return this.tryGetRuleContext(0, PathExprNoRootContext);
 	}
-	public PIPE(): TerminalNode | undefined { return this.tryGetToken(xpathParser.PIPE, 0); }
+	public PIPE(): TerminalNode | undefined { return this.tryGetToken(XPathParser.PIPE, 0); }
 	public unionExprNoRoot(): UnionExprNoRootContext | undefined {
 		return this.tryGetRuleContext(0, UnionExprNoRootContext);
 	}
-	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(xpathParser.PATHSEP, 0); }
+	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(XPathParser.PATHSEP, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_unionExprNoRoot; }
+	public get ruleIndex(): number { return XPathParser.RULE_unionExprNoRoot; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterUnionExprNoRoot) {
 			listener.enterUnionExprNoRoot(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitUnionExprNoRoot) {
 			listener.exitUnionExprNoRoot(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitUnionExprNoRoot) {
 			return visitor.visitUnionExprNoRoot(this);
 		} else {
@@ -2045,27 +2038,27 @@ export class PathExprNoRootContext extends ParserRuleContext {
 	public relativeLocationPath(): RelativeLocationPathContext | undefined {
 		return this.tryGetRuleContext(0, RelativeLocationPathContext);
 	}
-	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(xpathParser.PATHSEP, 0); }
-	public ABRPATH(): TerminalNode | undefined { return this.tryGetToken(xpathParser.ABRPATH, 0); }
+	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(XPathParser.PATHSEP, 0); }
+	public ABRPATH(): TerminalNode | undefined { return this.tryGetToken(XPathParser.ABRPATH, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_pathExprNoRoot; }
+	public get ruleIndex(): number { return XPathParser.RULE_pathExprNoRoot; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterPathExprNoRoot) {
 			listener.enterPathExprNoRoot(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitPathExprNoRoot) {
 			listener.exitPathExprNoRoot(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitPathExprNoRoot) {
 			return visitor.visitPathExprNoRoot(this);
 		} else {
@@ -2092,21 +2085,21 @@ export class FilterExprContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_filterExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_filterExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterFilterExpr) {
 			listener.enterFilterExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitFilterExpr) {
 			listener.exitFilterExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitFilterExpr) {
 			return visitor.visitFilterExpr(this);
 		} else {
@@ -2130,21 +2123,21 @@ export class OrExprContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_orExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_orExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterOrExpr) {
 			listener.enterOrExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitOrExpr) {
 			listener.exitOrExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitOrExpr) {
 			return visitor.visitOrExpr(this);
 		} else {
@@ -2168,21 +2161,21 @@ export class AndExprContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_andExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_andExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterAndExpr) {
 			listener.enterAndExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitAndExpr) {
 			listener.exitAndExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitAndExpr) {
 			return visitor.visitAndExpr(this);
 		} else {
@@ -2206,21 +2199,21 @@ export class EqualityExprContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_equalityExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_equalityExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterEqualityExpr) {
 			listener.enterEqualityExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitEqualityExpr) {
 			listener.exitEqualityExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitEqualityExpr) {
 			return visitor.visitEqualityExpr(this);
 		} else {
@@ -2244,57 +2237,57 @@ export class RelationalExprContext extends ParserRuleContext {
 	public LESS(i: number): TerminalNode;
 	public LESS(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.LESS);
+			return this.getTokens(XPathParser.LESS);
 		} else {
-			return this.getToken(xpathParser.LESS, i);
+			return this.getToken(XPathParser.LESS, i);
 		}
 	}
 	public MORE_(): TerminalNode[];
 	public MORE_(i: number): TerminalNode;
 	public MORE_(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.MORE_);
+			return this.getTokens(XPathParser.MORE_);
 		} else {
-			return this.getToken(xpathParser.MORE_, i);
+			return this.getToken(XPathParser.MORE_, i);
 		}
 	}
 	public LE(): TerminalNode[];
 	public LE(i: number): TerminalNode;
 	public LE(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.LE);
+			return this.getTokens(XPathParser.LE);
 		} else {
-			return this.getToken(xpathParser.LE, i);
+			return this.getToken(XPathParser.LE, i);
 		}
 	}
 	public GE(): TerminalNode[];
 	public GE(i: number): TerminalNode;
 	public GE(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.GE);
+			return this.getTokens(XPathParser.GE);
 		} else {
-			return this.getToken(xpathParser.GE, i);
+			return this.getToken(XPathParser.GE, i);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_relationalExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_relationalExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterRelationalExpr) {
 			listener.enterRelationalExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitRelationalExpr) {
 			listener.exitRelationalExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitRelationalExpr) {
 			return visitor.visitRelationalExpr(this);
 		} else {
@@ -2318,39 +2311,39 @@ export class AdditiveExprContext extends ParserRuleContext {
 	public PLUS(i: number): TerminalNode;
 	public PLUS(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.PLUS);
+			return this.getTokens(XPathParser.PLUS);
 		} else {
-			return this.getToken(xpathParser.PLUS, i);
+			return this.getToken(XPathParser.PLUS, i);
 		}
 	}
 	public MINUS(): TerminalNode[];
 	public MINUS(i: number): TerminalNode;
 	public MINUS(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.MINUS);
+			return this.getTokens(XPathParser.MINUS);
 		} else {
-			return this.getToken(xpathParser.MINUS, i);
+			return this.getToken(XPathParser.MINUS, i);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_additiveExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_additiveExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterAdditiveExpr) {
 			listener.enterAdditiveExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitAdditiveExpr) {
 			listener.exitAdditiveExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitAdditiveExpr) {
 			return visitor.visitAdditiveExpr(this);
 		} else {
@@ -2367,27 +2360,27 @@ export class MultiplicativeExprContext extends ParserRuleContext {
 	public multiplicativeExpr(): MultiplicativeExprContext | undefined {
 		return this.tryGetRuleContext(0, MultiplicativeExprContext);
 	}
-	public MUL(): TerminalNode | undefined { return this.tryGetToken(xpathParser.MUL, 0); }
-	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(xpathParser.PATHSEP, 0); }
+	public MUL(): TerminalNode | undefined { return this.tryGetToken(XPathParser.MUL, 0); }
+	public PATHSEP(): TerminalNode | undefined { return this.tryGetToken(XPathParser.PATHSEP, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_multiplicativeExpr; }
+	public get ruleIndex(): number { return XPathParser.RULE_multiplicativeExpr; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterMultiplicativeExpr) {
 			listener.enterMultiplicativeExpr(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitMultiplicativeExpr) {
 			listener.exitMultiplicativeExpr(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitMultiplicativeExpr) {
 			return visitor.visitMultiplicativeExpr(this);
 		} else {
@@ -2405,30 +2398,30 @@ export class UnaryExprNoRootContext extends ParserRuleContext {
 	public MINUS(i: number): TerminalNode;
 	public MINUS(i?: number): TerminalNode | TerminalNode[] {
 		if (i === undefined) {
-			return this.getTokens(xpathParser.MINUS);
+			return this.getTokens(XPathParser.MINUS);
 		} else {
-			return this.getToken(xpathParser.MINUS, i);
+			return this.getToken(XPathParser.MINUS, i);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_unaryExprNoRoot; }
+	public get ruleIndex(): number { return XPathParser.RULE_unaryExprNoRoot; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterUnaryExprNoRoot) {
 			listener.enterUnaryExprNoRoot(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitUnaryExprNoRoot) {
 			listener.exitUnaryExprNoRoot(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitUnaryExprNoRoot) {
 			return visitor.visitUnaryExprNoRoot(this);
 		} else {
@@ -2448,26 +2441,26 @@ export class QNameContext extends ParserRuleContext {
 			return this.getRuleContext(i, NCNameContext);
 		}
 	}
-	public COLON(): TerminalNode | undefined { return this.tryGetToken(xpathParser.COLON, 0); }
+	public COLON(): TerminalNode | undefined { return this.tryGetToken(XPathParser.COLON, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_qName; }
+	public get ruleIndex(): number { return XPathParser.RULE_qName; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterQName) {
 			listener.enterQName(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitQName) {
 			listener.exitQName(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitQName) {
 			return visitor.visitQName(this);
 		} else {
@@ -2487,28 +2480,28 @@ export class FunctionNameContext extends ParserRuleContext {
 			return this.getRuleContext(i, NCNameContext);
 		}
 	}
-	public COLON(): TerminalNode | undefined { return this.tryGetToken(xpathParser.COLON, 0); }
-	public NCName(): TerminalNode | undefined { return this.tryGetToken(xpathParser.NCName, 0); }
-	public AxisName(): TerminalNode | undefined { return this.tryGetToken(xpathParser.AxisName, 0); }
+	public COLON(): TerminalNode | undefined { return this.tryGetToken(XPathParser.COLON, 0); }
+	public NCName(): TerminalNode | undefined { return this.tryGetToken(XPathParser.NCName, 0); }
+	public AxisName(): TerminalNode | undefined { return this.tryGetToken(XPathParser.AxisName, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_functionName; }
+	public get ruleIndex(): number { return XPathParser.RULE_functionName; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterFunctionName) {
 			listener.enterFunctionName(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitFunctionName) {
 			listener.exitFunctionName(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitFunctionName) {
 			return visitor.visitFunctionName(this);
 		} else {
@@ -2526,21 +2519,21 @@ export class VariableReferenceContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_variableReference; }
+	public get ruleIndex(): number { return XPathParser.RULE_variableReference; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterVariableReference) {
 			listener.enterVariableReference(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitVariableReference) {
 			listener.exitVariableReference(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitVariableReference) {
 			return visitor.visitVariableReference(this);
 		} else {
@@ -2551,11 +2544,11 @@ export class VariableReferenceContext extends ParserRuleContext {
 
 
 export class NameTestContext extends ParserRuleContext {
-	public MUL(): TerminalNode | undefined { return this.tryGetToken(xpathParser.MUL, 0); }
+	public MUL(): TerminalNode | undefined { return this.tryGetToken(XPathParser.MUL, 0); }
 	public nCName(): NCNameContext | undefined {
 		return this.tryGetRuleContext(0, NCNameContext);
 	}
-	public COLON(): TerminalNode | undefined { return this.tryGetToken(xpathParser.COLON, 0); }
+	public COLON(): TerminalNode | undefined { return this.tryGetToken(XPathParser.COLON, 0); }
 	public qName(): QNameContext | undefined {
 		return this.tryGetRuleContext(0, QNameContext);
 	}
@@ -2563,21 +2556,21 @@ export class NameTestContext extends ParserRuleContext {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_nameTest; }
+	public get ruleIndex(): number { return XPathParser.RULE_nameTest; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterNameTest) {
 			listener.enterNameTest(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitNameTest) {
 			listener.exitNameTest(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitNameTest) {
 			return visitor.visitNameTest(this);
 		} else {
@@ -2588,28 +2581,28 @@ export class NameTestContext extends ParserRuleContext {
 
 
 export class NCNameContext extends ParserRuleContext {
-	public NCName(): TerminalNode | undefined { return this.tryGetToken(xpathParser.NCName, 0); }
-	public AxisName(): TerminalNode | undefined { return this.tryGetToken(xpathParser.AxisName, 0); }
-	public NodeType(): TerminalNode | undefined { return this.tryGetToken(xpathParser.NodeType, 0); }
+	public NCName(): TerminalNode | undefined { return this.tryGetToken(XPathParser.NCName, 0); }
+	public AxisName(): TerminalNode | undefined { return this.tryGetToken(XPathParser.AxisName, 0); }
+	public NodeType(): TerminalNode | undefined { return this.tryGetToken(XPathParser.NodeType, 0); }
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
 		super(parent, invokingState);
 	}
 	// @Override
-	public get ruleIndex(): number { return xpathParser.RULE_nCName; }
+	public get ruleIndex(): number { return XPathParser.RULE_nCName; }
 	// @Override
-	public enterRule(listener: xpathListener): void {
+	public enterRule(listener: XPathListener): void {
 		if (listener.enterNCName) {
 			listener.enterNCName(this);
 		}
 	}
 	// @Override
-	public exitRule(listener: xpathListener): void {
+	public exitRule(listener: XPathListener): void {
 		if (listener.exitNCName) {
 			listener.exitNCName(this);
 		}
 	}
 	// @Override
-	public accept<Result>(visitor: xpathVisitor<Result>): Result {
+	public accept<Result>(visitor: XPathVisitor<Result>): Result {
 		if (visitor.visitNCName) {
 			return visitor.visitNCName(this);
 		} else {

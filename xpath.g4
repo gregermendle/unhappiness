@@ -1,4 +1,4 @@
-grammar xpath;
+grammar XPath;
 
 /*
 XPath 1.0 grammar. Should conform to the official spec at

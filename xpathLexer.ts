@@ -1,4 +1,4 @@
-// Generated from xpath.g4 by ANTLR 4.7.3-SNAPSHOT
+// Generated from ./XPath.g4 by ANTLR 4.7.3-SNAPSHOT
 
 
 import { ATN } from "antlr4ts/atn/ATN";
@@ -6,16 +6,13 @@ import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer";
 import { CharStream } from "antlr4ts/CharStream";
 import { Lexer } from "antlr4ts/Lexer";
 import { LexerATNSimulator } from "antlr4ts/atn/LexerATNSimulator";
-import { NotNull } from "antlr4ts/Decorators";
-import { Override } from "antlr4ts/Decorators";
-import { RuleContext } from "antlr4ts/RuleContext";
 import { Vocabulary } from "antlr4ts/Vocabulary";
 import { VocabularyImpl } from "antlr4ts/VocabularyImpl";
 
 import * as Utils from "antlr4ts/misc/Utils";
 
 
-export class xpathLexer extends Lexer {
+export class XPathLexer extends Lexer {
 	public static readonly T__0 = 1;
 	public static readonly T__1 = 2;
 	public static readonly T__2 = 3;
@@ -84,35 +81,35 @@ export class xpathLexer extends Lexer {
 		"AT", "COMMA", "PIPE", "LESS", "MORE_", "LE", "GE", "COLON", "CC", "APOS", 
 		"QUOT", "Literal", "Whitespace", "NCName",
 	];
-	public static readonly VOCABULARY: Vocabulary = new VocabularyImpl(xpathLexer._LITERAL_NAMES, xpathLexer._SYMBOLIC_NAMES, []);
+	public static readonly VOCABULARY: Vocabulary = new VocabularyImpl(XPathLexer._LITERAL_NAMES, XPathLexer._SYMBOLIC_NAMES, []);
 
 	// @Override
 	// @NotNull
 	public get vocabulary(): Vocabulary {
-		return xpathLexer.VOCABULARY;
+		return XPathLexer.VOCABULARY;
 	}
 	// tslint:enable:no-trailing-whitespace
 
 
 	constructor(input: CharStream) {
 		super(input);
-		this._interp = new LexerATNSimulator(xpathLexer._ATN, this);
+		this._interp = new LexerATNSimulator(XPathLexer._ATN, this);
 	}
 
 	// @Override
-	public get grammarFileName(): string { return "xpath.g4"; }
+	public get grammarFileName(): string { return "XPath.g4"; }
 
 	// @Override
-	public get ruleNames(): string[] { return xpathLexer.ruleNames; }
+	public get ruleNames(): string[] { return XPathLexer.ruleNames; }
 
 	// @Override
-	public get serializedATN(): string { return xpathLexer._serializedATN; }
+	public get serializedATN(): string { return XPathLexer._serializedATN; }
 
 	// @Override
-	public get channelNames(): string[] { return xpathLexer.channelNames; }
+	public get channelNames(): string[] { return XPathLexer.channelNames; }
 
 	// @Override
-	public get modeNames(): string[] { return xpathLexer.modeNames; }
+	public get modeNames(): string[] { return XPathLexer.modeNames; }
 
 	public static readonly _serializedATN: string =
 		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x02&\u0197\b\x01" +
@@ -303,11 +300,11 @@ export class xpathLexer extends Lexer {
 		"\x03\b\x02\x02";
 	public static __ATN: ATN;
 	public static get _ATN(): ATN {
-		if (!xpathLexer.__ATN) {
-			xpathLexer.__ATN = new ATNDeserializer().deserialize(Utils.toCharArray(xpathLexer._serializedATN));
+		if (!XPathLexer.__ATN) {
+			XPathLexer.__ATN = new ATNDeserializer().deserialize(Utils.toCharArray(XPathLexer._serializedATN));
 		}
 
-		return xpathLexer.__ATN;
+		return XPathLexer.__ATN;
 	}
 
 }
