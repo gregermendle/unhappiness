@@ -2,13 +2,19 @@
   "name": "xpath-to-ast",
   "version": "0.0.1",
   "description": "Convert XPath to an AST",
+  "types": "index.d.ts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "antlr4ts -visitor xpath.g4"
   },
   "author": "128 Technology",
   "license": "ISC",
   "dependencies": {
-    "antlr4": "^4.7.2"
+    "antlr4ts": "^0.5.0-alpha.3"
+  },
+  "devDependencies": {
+    "antlr4ts-cli": "^0.5.0-alpha.3",
+    "typescript": "^3.6.3"
   }
 }
